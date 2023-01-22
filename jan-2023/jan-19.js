@@ -37,7 +37,7 @@ let findAverage = function (nums) {
 
 console.log(findAverage([1, 3, 5, 7]))
 
-*/
+
 
 function basicOp(operation, value1, value2){
   switch(operation){
@@ -55,3 +55,40 @@ function basicOp(operation, value1, value2){
 }
 
 console.log(basicOp('+', 4, 7))
+
+
+
+function htmlspecialchars(formData) {
+    return formData.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")
+  }
+
+console.log(htmlspecialchars("<h2>Hello World</h2>"))
+
+
+
+function sumArray(array) {
+    if(array == null){
+        return 0;
+    }
+
+    array.sort((a,b) => a-b);
+    array.pop();
+    array.shift();
+    let sum = array.reduce((a,b) => a+b);
+ 
+    return sum;
+}
+
+console.log(sumArray(null))
+
+*/
+
+function toCamelCase(str){
+    let array = str.split(/[-_]/);
+    for(let i = 0; i<array.length; i++){
+        array[i] = ( i === 0 ? array[i].slice(0,1) : array[i].toUpperCase().slice(0,1)) + array[i].toLowerCase().slice(1);
+    }
+    return array.join('');
+}
+
+console.log(toCamelCase('the_stealth_warrior'))
