@@ -251,11 +251,21 @@ multiplicationTable = function(size) {
 
   console.log(multiplicationTable(3))
   
-  */
+
 
   function bump(x){
     let bumps = x.replace(/_/g,'').length;
     return bumps <= 15 ? 'Woohoo!' : 'Car Dead';
   }
 
-  console.log(bump("nnn_n__n_n___nnnnn___n__nnn__"))
+  console.log(bump("nnn_n__n_n___nnnnn___n__nnn__"))  
+  
+  
+
+  function consonantCount(str) {
+    return str.replace(/[^bcdfghjklmnpqrstvwxyz]/gi,"")//.length;
+  }
+
+  console.log(consonantCount("ioooaeuueaueoauaaaaoouooiaauaeiaueieeerpcldnghyqjcfjzxccsqrntjczhwnqlghdqymvfgpyxbsghjjqbq"))
+  
+  */
